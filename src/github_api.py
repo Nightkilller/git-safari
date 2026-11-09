@@ -84,3 +84,4 @@ def fetch_user_stats(username="Nightkilller", token=None):
         print(f"[git-critters] Notice: Using fallback stats ({e})", file=sys.stderr)
 
     return stats
+

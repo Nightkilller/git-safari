@@ -5,7 +5,7 @@ from .github_api import fetch_user_stats
 from .creatures import CREATURES
 
 def main():
-    parser = argparse.ArgumentParser(description="Git-Critters: Dynamic animated creatures powered by your GitHub stats!")
+    parser = argparse.ArgumentParser(description="Git-Safari: Dynamic animated creatures powered by your GitHub stats!")
     parser.add_argument("--username", "-u", default="Nightkilller", help="GitHub username")
     parser.add_argument("--creature", "-c", default="all", choices=list(CREATURES.keys()) + ["all"], help="Which creature to generate")
     parser.add_argument("--output-dir", "-o", default="dist", help="Output directory for generated GIFs")
@@ -30,3 +30,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+

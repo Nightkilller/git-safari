@@ -123,3 +123,4 @@ def render_monkey_tree(stats, output_path="dist/monkey_tree.gif", frame_count=20
 
     frames[0].save(output_path, save_all=True, append_images=frames[1:], duration=65, loop=0, disposal=2)
     return output_path
+

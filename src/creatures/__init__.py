@@ -11,3 +11,4 @@ CREATURES = {
     "monkey_tree": render_monkey_tree,
     "buffalo": render_buffalo,
 }
+

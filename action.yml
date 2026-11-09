@@ -1,8 +1,8 @@
-name: Git-Critters
+name: Git-Safari
 description: Dynamic pixel-art animated companions (Giraffe, Snowman, Train Snake, Monkey, Buffalo) powered by your GitHub contributions & languages!
 author: Nightkilller
 branding:
-  icon: heart
+  icon: globe
   color: orange
 
 inputs:
@@ -17,7 +17,7 @@ inputs:
   output-dir:
     description: "Directory where the animated GIF(s) will be saved"
     required: false
-    default: "critters"
+    default: "safari"
   token:
     description: "GitHub token for querying API (built-in token is enough)"
     required: false
@@ -35,7 +35,7 @@ runs:
       shell: bash
       run: pip install pillow requests
 
-    - name: Generate Git-Critter(s)
+    - name: Generate Git-Safari Creature(s)
       shell: bash
       env:
         GH_TOKEN: ${{ inputs.token }}
