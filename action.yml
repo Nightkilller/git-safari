@@ -1,0 +1,46 @@
+name: Git-Critters
+description: Dynamic pixel-art animated companions (Giraffe, Snowman, Train Snake, Monkey, Buffalo) powered by your GitHub contributions & languages!
+author: Nightkilller
+branding:
+  icon: heart
+  color: orange
+
+inputs:
+  username:
+    description: "GitHub username whose stats will power the creature"
+    required: false
+    default: ${{ github.repository_owner }}
+  creature:
+    description: "Creature to generate: giraffe, snowman, snake_train, monkey_tree, buffalo, or all"
+    required: false
+    default: "giraffe"
+  output-dir:
+    description: "Directory where the animated GIF(s) will be saved"
+    required: false
+    default: "critters"
+  token:
+    description: "GitHub token for querying API (built-in token is enough)"
+    required: false
+    default: ${{ github.token }}
+
+runs:
+  using: composite
+  steps:
+    - name: Set up Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: "3.11"
+
+    - name: Install dependencies
+      shell: bash
+      run: pip install pillow requests
+
+    - name: Generate Git-Critter(s)
+      shell: bash
+      env:
+        GH_TOKEN: ${{ inputs.token }}
+      run: |
+        python3 "${{ github.action_path }}/src/cli.py" \
+          --username "${{ inputs.username }}" \
+          --creature "${{ inputs.creature }}" \
+          --output-dir "${{ inputs.output-dir }}"
