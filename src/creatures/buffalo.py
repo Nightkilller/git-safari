@@ -128,6 +128,6 @@ def render_buffalo(stats, output_path="dist/buffalo.gif", frame_count=20):
 
         frames.append(img)
 
-    frames[0].save(output_path, save_all=True, append_images=frames[1:], duration=65, loop=0, disposal=2)
+    frames[0].save(output_path, format="GIF", save_all=True, append_images=frames[1:], duration=65, loop=0, disposal=2)
     return output_path
 
