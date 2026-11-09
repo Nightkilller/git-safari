@@ -34,9 +34,42 @@ Every creature is generated **algorithmically** directly from your public GitHub
 
 ---
 
-## 🚀 How to Add Git-Safari to Your Profile README
+## ⚡ Quickest Way: Instant 1-Line Markdown (Zero Setup!)
 
-You can add any creature to your GitHub profile repository (`<your-username>/<your-username>`) in 2 simple steps:
+No workflow files or setup required! Just copy and paste one line into your profile `README.md` (replace `YOUR_USERNAME` with your GitHub username):
+
+### 🦒 The Giraffe (Neck grows with commits):
+```html
+<img src="https://git-safari.vercel.app/api?username=YOUR_USERNAME&creature=giraffe" width="240" alt="GitHub Giraffe" />
+```
+
+### 🐃 The Buffalo (Collects milk cans):
+```html
+<img src="https://git-safari.vercel.app/api?username=YOUR_USERNAME&creature=buffalo" width="260" alt="GitHub Buffalo" />
+```
+
+### 🐒 The Monkey & Tree (Climbs higher):
+```html
+<img src="https://git-safari.vercel.app/api?username=YOUR_USERNAME&creature=monkey_tree" width="240" alt="GitHub Monkey Tree" />
+```
+
+### 🚂 The Snake Train (Adds carriages):
+```html
+<img src="https://git-safari.vercel.app/api?username=YOUR_USERNAME&creature=snake_train" width="280" alt="GitHub Code Train" />
+```
+
+### ⛄ The Snowman (Belly expands):
+```html
+<img src="https://git-safari.vercel.app/api?username=YOUR_USERNAME&creature=snowman" width="240" alt="GitHub Snowman" />
+```
+
+> 🔒 **100% Privacy-Safe:** Git-Safari only reads public contribution numbers and language percentages. It never accesses private repositories, personal identity, or sensitive tokens.
+
+---
+
+## 🤖 Method 2: Automated GitHub Action (Self-Hosted in Your Repo)
+
+If you prefer committing the animated GIF directly into your own repository, use the GitHub Marketplace Action:
 
 ### Step 1: Create the GitHub Actions Workflow
 In your profile repository, create `.github/workflows/safari.yml`:

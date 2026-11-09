@@ -65,3 +65,4 @@ def app(environ, start_response):
     except Exception as e:
         start_response("500 Internal Server Error", [("Content-Type", "text/plain")])
         return [f"Error rendering creature: {e}".encode("utf-8")]
+
